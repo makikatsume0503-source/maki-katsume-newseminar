@@ -23,6 +23,9 @@ export const Hero: React.FC = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
+                    <p className="text-slate-800 font-bold text-lg md:text-xl mb-4 tracking-wider drop-shadow-sm">
+                        あなたのライティング常識が覆る、濃密な2時間👇
+                    </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-lg mx-auto">
                         {/* Real-time Participation */}
                         <motion.a

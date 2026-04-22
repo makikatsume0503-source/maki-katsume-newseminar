@@ -4,44 +4,25 @@ import { ArrowRight, Smartphone } from 'lucide-react';
 
 export const Hero: React.FC = () => {
     return (
-        <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-slate-50">
-            {/* Background Image with Overlay */}
-            <div className="absolute inset-0 z-0">
-                <img
-                    src="/assets/hero-workspace.png"
-                    alt="Sophisticated writer's desk with MacBook"
-                    className="w-full h-full object-cover"
-                />
-                {/* Darker overlay for readability */}
-                <div className="absolute inset-0 bg-slate-900/60 mix-blend-multiply" />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
+        <section className="relative w-full flex flex-col items-center bg-slate-50">
+            {/* Banner Image */}
+            <div className="w-full">
+                <picture>
+                    <source media="(max-width: 768px)" srcSet="/assets/hero-banner-sp.png" />
+                    <img
+                        src="/assets/hero-banner-pc.png"
+                        alt="AIライティング実践講座"
+                        className="w-full h-auto object-cover"
+                    />
+                </picture>
             </div>
 
-            <div className="relative z-10 container mx-auto px-4 text-center text-white max-w-4xl">
+            <div className="relative z-10 container mx-auto px-4 text-center mt-[-30px] md:mt-[-50px] max-w-4xl pb-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <span className="inline-block py-2 px-6 rounded-full bg-secondary/90 text-primary font-bold text-lg md:text-2xl mb-8 tracking-wider shadow-lg border-2 border-primary/20">
-                        AIライティング実践講座
-                    </span>
-                    <h1 className="text-3xl sm:text-4xl md:text-6xl font-black leading-tight mb-6 drop-shadow-lg tracking-tight">
-                        「書く」のその先へ。<br /><br className="block md:hidden" />
-                        <span className="text-secondary">AIを最強のパートナーに。</span><br />
-                    </h1>
-                    <div className="text-sm sm:text-base md:text-xl font-medium mb-8 leading-relaxed max-w-3xl mx-auto drop-shadow-md text-slate-100 space-y-4 md:space-y-2">
-                        <p>
-                            あなたのライティングスタイルをAIに読み込ませ、<br />
-                            資料・図解・LP・アプリまで生み出す2時間。
-                        </p>
-                        <p>
-                            AIは単なるツールから<br className="block md:hidden" />
-                            「パートナー」へと進化します。
-                        </p>
-
-                    </div>
-
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-lg mx-auto">
                         {/* Real-time Participation */}
                         <motion.a
@@ -65,8 +46,6 @@ export const Hero: React.FC = () => {
                             </div>
                         </motion.a>
                     </div>
-
-
                 </motion.div>
             </div>
         </section>

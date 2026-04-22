@@ -17,7 +17,7 @@ export const Hero: React.FC = () => {
                 </picture>
             </div>
 
-            <div className="relative z-10 container mx-auto px-4 text-center mt-[-30px] md:mt-[-50px] max-w-4xl pb-10">
+            <div className="relative z-10 container mx-auto px-4 text-center mt-6 md:mt-8 max-w-4xl pb-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
